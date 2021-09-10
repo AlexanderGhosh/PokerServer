@@ -1,7 +1,7 @@
 const {Game, Player} = require('./Game')
-// import {Game, Player, GameStates} from 'Game'
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 8000;
 
@@ -11,6 +11,7 @@ let players = [];
 
 app.use(express.json())
 app.use(express.static(__dirname + '/static'));
+app.use(cors());
 
 app.get('/', function(req, res) {
   res.send('jimbo');
