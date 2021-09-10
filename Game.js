@@ -220,7 +220,7 @@ class Game{
         break;
       case GameStates.End:
         // determin winner then reset the game
-        setInterval(this.reset 5000);
+        setInterval(this.reset, 5000);
         break;
     }
   }
