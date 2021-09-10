@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function(req, res) {
-  res.json(req.body);
+  res.send('jimbo');
 });
 
 app.get('/get', function(req, res) {
